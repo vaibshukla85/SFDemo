@@ -15,7 +15,7 @@ require('./app/routes/portalAPIs')(app,  pg_connector);
 require('./app/routes/apiRoute')(app,  pg_connector);
 
 app.get('*', function (req, res,next) {
-	return res.sendFile(path.join(__dirname, 'index.html')); 
+	return res.sendFile('index.html'); 
 });
 
 app.listen(port, () => {
